@@ -5,6 +5,8 @@ Cropping and scaling are done on the local computer, *no data is uploaded to any
 
 This tool can be accessed via [https://christianatnacmu.github.io/mk250/](https://christianatnacmu.github.io/mk250/) or may be downloaded for offline use.
 
+![Screenshot](https://github.com/christianatnacmu/mk250/blob/main/screenshot.png?raw=true)
+
 ## Source
 Source file should be an image (jpg, png, ...) and should of course be of good readable quality from the start. 
 
