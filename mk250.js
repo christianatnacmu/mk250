@@ -92,12 +92,15 @@ $( function(){
      * Set the active preset and update aspect ratio
      */
     function setActivePreset(presetName){
-        console.log('Setting document type to '+ presetName)
-        
+        // Set active preset      
         activePreset = presets.filter( d => d.name == presetName )[0] 
 
         // Set aspect ratio
         cropper.setAspectRatio(activePreset.aspectRatio)
+
+        // Log
+        console.log('Active preset: ' + activePreset.name)
+        console.log(activePreset)
     }
 
     /**
@@ -126,14 +129,17 @@ $( function(){
         let dataUrl
         let size_in_kb
     
+        // Reduce quality from 1 to 0.1 in steps of 0.1 
         for(let i = 10; i > 0; i--){
             q = i / 10;
             dataUrl = cropper.getCroppedCanvas( { width: activePreset.width } ).toDataURL('image/jpeg', q); 
         
+            // Calculate size of resulting file in kb
             var content_without_mime = dataUrl.split(",")[1];
             size_in_kb = Math.round( (window.atob(content_without_mime).length) / 1000 );
             
-            if(size_in_kb < 250) break;
+            // Stop if file size is less then 240kb (5kb tolerance as acueal size can be a few kb more)
+            if(size_in_kb <= 245) break;
         }
 
         console.log('Resulting file ' + size_in_kb + 'kb, quality: ' + q)
