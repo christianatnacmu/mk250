@@ -3,7 +3,7 @@ This tool is specifically designed to scale down images for uploading to Uganda 
 
 Cropping and saving is done on the client's machine therefore the images are not uploaded in any way.
 
-Use the tool [here at Github.io](https://christianatnacmu.github.io/mk250/)
+This tool can be used via [https://christianatnacmu.github.io/mk250/](https://christianatnacmu.github.io/mk250/)
 
 ## Source
 Source file should be an image (jpg, png, ...) and should of course be of good readable quality from the start. 
