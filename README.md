@@ -1,6 +1,10 @@
 # mk250
 This tool is specifically designed to scale down images for uploading to Uganda Electronic Visa/Permit Application System which requires any uploaded image file to have a file size not exceeding 250kb. This tool resizes and compresses source files to fit those requirements while maintaining readability (depending on source). Designed for desktop use however not unusable on mobile.
 
+Cropping and saving is done on the client's machine therefore the images are not uploaded in any way.
+
+Use the tool [here at Github.io](https://christianatnacmu.github.io/mk250/)
+
 ## Source
 Source file should be an image (jpg, png, ...) and should of course be of good readable quality from the start. 
 
