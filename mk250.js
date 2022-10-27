@@ -37,7 +37,7 @@ $( function(){
         if(inputFiles == undefined || inputFiles.length == 0) return;
         var inputFile = inputFiles[0];
         fileName = inputFile.name.replace(/\.[^/.]+$/, "")
-        $('#fileName').val(fileName)
+        $('#fileName').val(fileName + '_250kb')
         
         var reader = new FileReader();
         reader.onload = function(event) {
