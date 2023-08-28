@@ -16,7 +16,7 @@ const wizard = {
         },
         {
             container: '#stepType',
-            validate: () => { return true }
+            validate: () => { return !(activePreset == 0) }
         },
         {
             container: '#stepCrop',

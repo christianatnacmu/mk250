@@ -2,7 +2,7 @@
  * Presets
  */
 const presets = [
-    { name: "Reset", aspectRatio: 0, width: 1200, title: "Reset" },
+    { name: "Custom", aspectRatio: 0, width: 1200, title: "Custom" },
     { name: "A4-p", aspectRatio: (210/297), width: 800, title: "A4 (Portrait)" },
     { name: "A4-l", aspectRatio: (297/210), width: 1200, title: "A4 (Landsapce)" },
     { name: "letter-p", aspectRatio: (85 / 110), width: 820, title: "Letter (Portrait)" },
@@ -12,7 +12,7 @@ const presets = [
     { name: "pp-full", aspectRatio: (125 / 176), width: 500, title: "Passport (two pages)" },
     { name: "pp-half", aspectRatio: (125 / 88), width: 800, title: "Passport (single page)" }
 ]      
-let activePreset = presets[0];   
+let activePreset = 0;
 
 $( function(){
     /**
@@ -80,6 +80,11 @@ $( function(){
         
         // Set preset
         setActivePreset(presetName)
+
+        // Trigger form change
+        const e = new Event('change')
+        const form = document.querySelector('#form')
+        form.dispatchEvent(e)
         return
     })
 
