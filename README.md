@@ -1,15 +1,13 @@
 # mk250
-This tool is specifically designed to scale down images for uploading to [Uganda Electronic Visa/Permit Application System](https://visas.immigration.go.ug/) which requires any uploaded image file to have a file size not exceeding 250kb. This tool resizes and compresses source files to fit those requirements while maintaining readability (depending on source). Designed for desktop use however not unusable on mobile.
+This tool is specifically designed to prepare documents for uploading to [Uganda Electronic Visa/Permit Application System](https://visas.immigration.go.ug/) which requires any uploaded image file to have a file size not exceeding 250kb. This tool resizes and compresses source files to fit those requirements while maintaining readability (provided the source is readable).
 
-Cropping and scaling are done on the local computer, *no data is uploaded to any server* so your documents are secure.
+Cropping and scaling are done on your device, no data is uploaded to any server so your documents are secure. 
 
-This tool can be accessed via [https://christianatnacmu.github.io/mk250/](https://christianatnacmu.github.io/mk250/) or may be downloaded for offline use.
+This tool can be accessed via [https://ugtools.mooo.com/mk250/](https://ugtools.mooo.com/mk250/) or may be downloaded for offline use.
 
 Built with [Cropper.js](https://github.com/fengyuanchen/cropperjs), [Bootstrap](https://github.com/twbs/bootstrap) and [jQuery](https://github.com/jquery/jquery)
 
-![Screenshot](https://github.com/christianatnacmu/mk250/blob/main/screenshot.png?raw=true)
-
-
+![Screenshot](https://github.com/christianberkman/mk250/blob/mobile/screenshot.png?raw=true)
 
 ## Source File
 Source file should be an image (jpg, png, ...) and should of course be of good readable quality from the start. 
