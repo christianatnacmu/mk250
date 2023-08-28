@@ -15,6 +15,10 @@ const steps = {
             }
         },
         {
+            container: '#stepType',
+            validate: () => { return true }
+        },
+        {
             container: '#stepCrop',
             validate: () => { return true }
         },
