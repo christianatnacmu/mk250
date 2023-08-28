@@ -31,74 +31,79 @@
             </div><!--/col-->
         </div><!--/header row-->
 
-        <div class="row">
-          <div class="col-12 col-md-6 col-lg-5 mb-3">
-            
-            <form id="form">
+        <div class="row mb-3">
+          <div class="col-12 col-lg-5 me-3">
 
-            <div class="step" id="strpIntro">
-              <h3>Prepare documents for Uganda Immigration</h3>
-              <p>
-                  This tool is specifically designed to prepare documents for uploading to <a href="https://visas.immigration.go.ug/" target="_blank">Uganda Electronic Visa/Permit Application System</a> which requires any uploaded image file to have a file size not exceeding <strong>250kb</strong>. This tool resizes and compresses source files to fit those requirements while maintaining readability (provided the source is readable).
-              </p>
-              <p>
-                Cropping and scaling are done on your device, <em>no data is uploaded to any server</em> so your documents are secure.
-              </p>
-            </div><!--/step1-->
+            <div class="d-flex flex-column h-100">
+              <div class="flex-grow-1">
+                <form id="form">
 
-            <div class="step visually-hidden" id="stepFile">
-              <h3>Select document</h3>
-
-              <input type="file" id="fileInput" class="form-control" accept="image/*" />
-
-              <p class="text-muted">File must be JPG, JPEG or PNG</p>
-            </div><!--/stepFile-->
-
-            <div class="step visually-hidden" id="stepType">
-              <h3 class="mt-3">Select Document Type</h2>
-            
-              <div id="presetButtons" class="mb3">
-                <button type="button" class="btn btn-sm btn-outline-primary mb-1 preset prototype d-none"></button>
-              </div>
-            </div>
-
-            <div class="step visually-hidden" id="stepCrop">
-              <h3>Crop your document</h3>
-              
-              <p>Crop and rotate your document.</p>
-
-              <button type="button" class="btn btn-sm btn-primary" id="btnRotateCW"><i class="bi bi-arrow-clockwise"></i></button>
-              <button type="button" class="btn btn-sm btn-primary" id="btnRotateCCW"><i class="bi bi-arrow-counterclockwise"></i></button>              
-            </div><!--/stepCrop-->
-
-            <div class="step visually-hidden" id="stepDownload">
-              <h3 class="mt-3">Download</h3>
-              <p>
-                The resulting file has a maximum file size of 250kb while maintaining enough detail in the document for readability.
-              </p>
-
-              <div class="input-group mb-3">
-                <span class="input-group-text">Filename</span>
-                <input type="text" class="form-control" id="fileName" />
-                <span class="input-group-text">.jpeg</span>
-              </div>
-
-              <a id="btnDownload" class="btn btn-success w-100 d-none" />Download</a>
-            </div><!--/stepDownload-->
-
-            </form>
-
-            <div class="btn-group w-100 mt-3">
-              <button class="btn btn-primary" id="btnPrev" disabled>
-                <i class="bi bi-caret-left-fill"></i>
-              </button>
-              <button class="btn btn-primary" id="btnNext" disabled>
-                <i class="bi bi-caret-right-fill"></i>
-              </button>
-            </div>
+                  <div class="step" id="strpIntro">
+                    <h3>Prepare documents for Uganda Immigration</h3>
+                    <p>
+                        This tool is specifically designed to prepare documents for uploading to <a href="https://visas.immigration.go.ug/" target="_blank">Uganda Electronic Visa/Permit Application System</a> which requires any uploaded image file to have a file size not exceeding <strong>250kb</strong>. This tool resizes and compresses source files to fit those requirements while maintaining readability (provided the source is readable).
+                    </p>
+                    <p>
+                      Cropping and scaling are done on your device, <em>no data is uploaded to any server</em> so your documents are secure.
+                    </p>
+                  </div><!--/step1-->
+      
+                  <div class="step visually-hidden" id="stepFile">
+                    <h3>Select document</h3>
+      
+                    <input type="file" id="fileInput" class="form-control" accept="image/*" />
+      
+                    <p class="text-muted">File must be JPG, JPEG or PNG</p>
+                  </div><!--/stepFile-->
+      
+                  <div class="step visually-hidden" id="stepType">
+                    <h3 class="mt-3">Select Document Type</h2>
+                  
+                    <div id="presetButtons" class="mb3">
+                      <button type="button" class="btn btn-sm btn-outline-primary mb-1 preset prototype d-none"></button>
+                    </div>
+                  </div>
+      
+                  <div class="step visually-hidden" id="stepCrop">
+                    <h3>Crop your document</h3>
+                    
+                    <p>Crop and rotate your document.</p>
+      
+                    <button type="button" class="btn btn-sm btn-primary" id="btnRotateCW"><i class="bi bi-arrow-clockwise"></i></button>
+                    <button type="button" class="btn btn-sm btn-primary" id="btnRotateCCW"><i class="bi bi-arrow-counterclockwise"></i></button>              
+                  </div><!--/stepCrop-->
+      
+                  <div class="step visually-hidden" id="stepDownload">
+                    <h3 class="mt-3">Download</h3>
+                    <p>
+                      The resulting file has a maximum file size of 250kb while maintaining enough detail in the document for readability.
+                    </p>
+      
+                    <div class="input-group mb-3">
+                      <span class="input-group-text">Filename</span>
+                      <input type="text" class="form-control" id="fileName" />
+                      <span class="input-group-text">.jpeg</span>
+                    </div>
+      
+                    <a id="btnDownload" class="btn btn-success w-100 d-none" />Download</a>
+                  </div><!--/stepDownload-->
+      
+                </form>      
+              </div><!--/flex grow-->
+              <div class="flex-shrink-1 mb-3">
+                <div class="btn-group w-100 mt-3">
+                  <button class="btn btn-primary" id="btnPrev" disabled>
+                    <i class="bi bi-caret-left-fill"></i>
+                  </button>
+                  <button class="btn btn-primary" id="btnNext" disabled>
+                    <i class="bi bi-caret-right-fill"></i>
+                  </button>
+                </div>
+              </div><!--/flex shrink-->
+            </div><!--/flex-->            
           
-          </div><!--/col sidebar-->
-          <div class="col-12 col-md-6 col-lg-7" id="colCanvas">
+          </div><!--/col wizard-->
+          <div class="col-12 col-lg-5" id="colCanvas">
             <canvas id="cropCanvas">
             </canvas>
           </div>
