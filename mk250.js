@@ -1,7 +1,8 @@
 /**
  * Presets
  */
- const presets = [
+const presets = [
+    { name: "Reset", aspectRatio: 0, width: 1200, title: "Reset" },
     { name: "A4-p", aspectRatio: (210/297), width: 800, title: "A4 (Portrait)" },
     { name: "A4-l", aspectRatio: (297/210), width: 1200, title: "A4 (Landsapce)" },
     { name: "letter-p", aspectRatio: (85 / 110), width: 820, title: "Letter (Portrait)" },
@@ -11,7 +12,7 @@
     { name: "pp-full", aspectRatio: (125 / 176), width: 500, title: "Passport (two pages)" },
     { name: "pp-half", aspectRatio: (125 / 88), width: 800, title: "Passport (single page)" }
 ]      
-let activePreset;   
+let activePreset = presets[0];   
 
 $( function(){
     /**
@@ -77,12 +78,6 @@ $( function(){
 
         const presetName = $(this).attr('data-preset')
         
-        // Free
-        if(presetName == 'custom'){
-            cropper.setAspectRatio(null)
-            return
-        }
-        
         // Set preset
         setActivePreset(presetName)
         return
@@ -115,10 +110,18 @@ $( function(){
     })
 
     /**
-     * Cropper.JS setup
+     * Cropper.JS
      */
     const cropCanvas = document.getElementById('cropCanvas')
-    let cropper = new Cropper(cropCanvas, { aspectRatio: (2 / 1 ), autoCrop: true, autoCropArea: 1 })
+    const cropper = new Cropper(cropCanvas, { 
+        viewMode: 1,
+        aspectRatio: null, 
+        autoCrop: true, 
+        autoCropArea: 1, 
+        minContainerWidth: 10,  
+        minCanvasWidth: 10,
+        }
+    )
 
     /**
      * Iterate to get maximum filesize
